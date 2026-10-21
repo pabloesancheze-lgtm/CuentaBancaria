@@ -1,0 +1,15 @@
+from CuentaBancaria import cuentaBancaria
+from CuentaBancaria import SaldoInsuficiente
+
+class Main:
+    def main(self):
+        mi_cuentaBancaria = cuentaBancaria(4033, 100)
+
+        try:    
+            mi_cuentaBancaria.retirarMonto()
+        except SaldoInsuficiente as error:
+            print(f"Transacción fallida:", error)
+if __name__ == "__main__":
+    Main().main()
+
+        
